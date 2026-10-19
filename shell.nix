@@ -26,6 +26,7 @@ pkgs.mkShell {
 
   nativeBuildInputs = with pkgs; [
     cmake
+    clang-tools
     ninja
     openjdk17
     python3

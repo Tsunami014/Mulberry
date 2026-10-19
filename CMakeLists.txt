@@ -4,7 +4,7 @@ set(CMAKE_AUTORCC ON)
 set(APP_NAME Mulberry)
 
 set(CORE
-    main.cpp
+    main.cpp  app.cpp
 )
 
 

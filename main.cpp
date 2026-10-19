@@ -1,15 +1,18 @@
 #include <QApplication>
-#include <QLabel>
+#include "app.hpp"
 
-int main(int argc, char *argv[]) {
+MainApp* MA = nullptr;
+
+int main(int argc, char* argv[]) {
     QCoreApplication::setApplicationName("Mulberry");
     QApplication app(argc, argv);
 
-    QLabel label("Hello, World!");
-    label.setWindowTitle("My First Qt App");
-    label.resize(300, 100);
-    label.setAlignment(Qt::AlignCenter);
+    QFont font = QApplication::font();
+    font.setPointSize(16);
+    QApplication::setFont(font);
 
-    label.show();
+    MA = new MainApp();
+    MA->setWindowFlags(MA->windowFlags() | Qt::ExpandedClientAreaHint);
+    MA->show();
     return app.exec();
 }
