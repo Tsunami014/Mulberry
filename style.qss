@@ -1,0 +1,4 @@
+QMainWindow { background-color: white; }
+
+/* Testing for now */
+QLabel { padding: 8px; }

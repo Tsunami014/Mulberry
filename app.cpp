@@ -17,4 +17,6 @@ MainApp::MainApp() {
         labl->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
         labl->setStyleSheet("background-color: blue");
         mlay->addWidget(labl);}
+
+    setupStyle(true);
 }

@@ -7,6 +7,13 @@ class MainApp : public QMainWindow {
 public:
     MainApp();
 
+    void setupStyle();
+
+signals:
+    void themeChange();
+
 private:
     QStackedWidget* stack;
+
+    void setupStyle(bool init = false);
 };

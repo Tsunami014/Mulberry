@@ -8,6 +8,7 @@ The `make` command installs multiple versions of Qt for you (for compiling to di
 - `make desktop` creates a release desktop version at `out/Desktop`
 - `make android` creates a release android apk at `out/Android.apk`
 - `make release` runs `make desktop` and `make android`
+- `make clean` deletes build files
 
 ### Android
 If it ever complains about signatures, just uninstall the old app and try installing your version again.

@@ -5,13 +5,15 @@ set(APP_NAME Mulberry)
 
 set(CORE
     main.cpp  app.cpp
+    style.cpp  resources.qrc
 )
 
 
 project(${APP_NAME} LANGUAGES CXX)
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+qt_policy(SET QTP0002 NEW) # Shushes a warning
 qt_add_executable(${APP_NAME} ${CORE})
-target_link_libraries(${APP_NAME} PRIVATE Qt6::Core Qt6::Widgets)
+target_link_libraries(${APP_NAME} PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets)
 
 target_include_directories(${APP_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
 
